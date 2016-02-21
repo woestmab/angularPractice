@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>AngularPractice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="angularPractice.js"></script>
+  </head>
+  <body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+      <table border="1" width="100%">
+
+        <tr>
+          <th>First Name<input type="text" ng-model="test"></th>
+          <th>Last Name</th>
+        </tr>
+        <tr ng-repeat="x in names | filter:test">
+          <td>{{ x.firstName }}</td>
+          <td>{{ x.lastName }}</td>
+        </tr>
+      </table>
+    </div>
+
+  </body>
+</html>

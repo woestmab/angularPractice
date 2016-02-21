@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Twitter example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="twitter.js"></script>
+  </head>
+  <body>
+
+    <div ng-app="myApp" ng-controller="mainController">
+
+      <label>What is your twitter handle?</label>
+      <!--the handle is a $scope var in the js file-->
+      <input type="text" ng-model="handle">
+
+      <!--this method is called in the js file-->
+      twitter.com/{{ lowerCaseHandle() }}
+    </div>
+
+  </body>
+</html>
